@@ -1,0 +1,27 @@
+ .container {
+    display:flex;
+    width:90%;
+    height: 80px;
+    background:black;
+    color:white;
+  justify-content: space-around;
+  margin: auto;
+   
+
+}
+button{
+    background-color: rgb(0, 234, 255);
+    margin-top: 19px;
+    width: 96px;
+    height: 37px;
+    border-radius: 20px;
+    color: white;
+}
+.list{
+    display: flex;
+    justify-content: space-around;
+    margin-right: 19px;
+    /* border: 1px solid red; */
+    width: 125%;
+    margin-top: 26px;
+}

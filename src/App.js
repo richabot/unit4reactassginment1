@@ -1,25 +1,48 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Hello from './component/Hello';
+
+import NavbarLogo from './component/NavbarLogo';
+import NavbarLinks from './component/NavbarLinks';
+import NavbarButton from './component/NavbarButton';
+
 
 function App() {
+
+var info=[
+ { title:"Services"},
+ {title:"Projects"},
+ {title:"About"}
+
+]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ 
+    <>
+
+<div className='container'>
+<NavbarLogo></NavbarLogo>
+{/* <NavbarLinks></NavbarLinks> */}
+{
+  info.map((user)=>(
+    <div key={user.name}>
+      <NavbarLinks{...user}/>
+      </div>
+  )
+    
+  )
+}
+<NavbarButton></NavbarButton>
+</div>
+  <Hello></Hello>
+   
+ 
+ 
+   
+  
+       </>
+  )
+  
 }
 
 export default App;
+ /* /* <div className={`${styles.container}`}> */ 
